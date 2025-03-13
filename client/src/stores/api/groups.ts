@@ -13,6 +13,9 @@ export enum Group {
     /** Représente le groupe des gestionnaires, membres de l'équipe. */
     MANAGEMENT = 'management',
 
+    /** FDJ : Techniciens pouvant juste modifier les techniciens des évènements */
+    TECHNICIAN = 'technician',
+
     /**
      * Représente le groupe des utilisateurs ayant accès au
      * planning général, en lecture seule.
@@ -43,6 +46,7 @@ const all = (): GroupDetails[] => {
     return [
         { id: Group.ADMINISTRATION, name: __('groups.administration') },
         { id: Group.MANAGEMENT, name: __('groups.management') },
+        { id: Group.TECHNICIAN, name: __('groups.technician') },
         { id: Group.READONLY_PLANNING_GENERAL, name: __('groups.readonly-planning-general') },
     ];
 };

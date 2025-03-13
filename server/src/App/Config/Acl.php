@@ -179,6 +179,129 @@ final class Acl
             ],
             'api-catch-not-found',
         ],
+        Group::TECHNICIAN => [
+            'Auth' => [
+                'getSelf',
+                'logout',
+            ],
+            'Attribute' => [
+                'getAll',
+                'update',
+                'delete',
+            ],
+            'User' => [
+                'getOne',
+                'getSettings',
+                'update',
+                'updateSettings',
+            ],
+            'Tag' => [
+                'getAll',
+            ],
+            'DegressiveRate' => [
+                'getAll',
+            ],
+            'Tax' => [
+                'getAll',
+            ],
+            'Category' => [
+                'getAll',
+            ],
+            'Person' => [
+                'getAll',
+            ],
+            'Technician' => [
+                'getAll',
+                'getEvents',
+                'getDocuments',
+                'getAllWhileEvent',
+                'getOne',
+                'create',
+                'attachDocument',
+                'update',
+                'restore',
+                'delete',
+            ],
+            'Beneficiary' => [
+                'getAll',
+                'getOne',
+                'getBookings',
+                'getEstimates',
+                'getInvoices',
+            ],
+            'Country' => [
+                'getAll',
+                'getOne',
+            ],
+            'Company' => [
+                'getAll',
+                'getOne',
+            ],
+            'Park' => [
+                'getAll',
+                'getList',
+                'getOne',
+                'getOneTotalAmount',
+                'getOneMaterials',
+            ],
+            'Material' => [
+                'getAll',
+                'getOne',
+                'getTags',
+                'getDocuments',
+                'getBookings',
+                'getAllWhileEvent',
+                'getPicture',
+                'getAllPdf',
+            ],
+            'Event' => [
+                'getAll',
+                'getOne',
+                'getOnePdf',
+                'getEvents',
+                'getDocuments',
+                'getMissingMaterials',
+            ],
+            'EventTechnician' => [
+                'getOne',
+                'create',
+                'update',
+                'delete',
+            ],
+            'Invoice' => [
+                'getOnePdf',
+            ],
+            'Estimate' => [
+                'getOnePdf',
+                'delete',
+            ],
+            'Setting' => [
+                'getAll',
+            ],
+            'Booking' => [
+                'getAll',
+                'getOne',
+                'getOneSummary',
+            ],
+            'BookingMaterial' => [
+                'resynchronize',
+            ],
+            'BookingExtra' => [
+                'resynchronize',
+            ],
+            'Document' => [
+                'getFile',
+                'delete',
+            ],
+            'Calendar' => [
+                'public',
+            ],
+            'Entry' => [
+                'external',
+                'default',
+            ],
+            'api-catch-not-found',
+        ],
         Group::READONLY_PLANNING_GENERAL => [
             'Auth' => [
                 'getSelf',

@@ -122,6 +122,7 @@ final class User extends BaseModel implements Serializable
             ->anyOf(
                 V::equals(Group::ADMINISTRATION),
                 V::equals(Group::MANAGEMENT),
+                V::equals(Group::TECHNICIAN),
                 V::equals(Group::READONLY_PLANNING_GENERAL),
                 V::equals(Group::READONLY_PLANNING_SELF),
             )

@@ -16,6 +16,9 @@ final class Group
     /** Représente le groupe des gestionnaires, membres de l'équipe. */
     public const MANAGEMENT = 'management';
 
+    /** FDJ : Techniciens pouvant juste modifier les techniciens des évènements */
+    public const TECHNICIAN = 'technician';
+
     /**
      * Représente le groupe des utilisateurs ayant accès au
      * planning général, en lecture seule.
@@ -39,6 +42,7 @@ final class Group
         return [
             Group::READONLY_PLANNING_SELF,
             Group::READONLY_PLANNING_GENERAL,
+            Group::TECHNICIAN,
             Group::MANAGEMENT,
             Group::ADMINISTRATION,
         ];
