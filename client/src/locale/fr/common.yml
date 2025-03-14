@@ -106,6 +106,7 @@ access: Accès
 groups:
     administration: Administration
     management: Gestion
+    technician: Technicien
     readonly-planning-general: Consultation du planning
     external: Externe
 owner: Propriétaire
