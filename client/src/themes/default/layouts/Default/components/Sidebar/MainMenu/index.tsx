@@ -23,7 +23,8 @@ const DefaultLayoutSidebarMainMenu = defineComponent({
 
             const isAdmin = this.$store.getters['auth/is'](Group.ADMINISTRATION);
             const isMember = this.$store.getters['auth/is'](Group.MANAGEMENT);
-            if (isAdmin || isMember) {
+            const isTechnician = this.$store.getters['auth/is'](Group.TECHNICIAN);
+            if (isAdmin || isMember || isTechnician) {
                 links.push(
                     { ident: 'materials', to: '/materials', icon: 'box' },
                     { ident: 'technicians', to: '/technicians', icon: 'people-carry' },

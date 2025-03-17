@@ -83,6 +83,7 @@ const EventDetailsHeader = defineComponent({
             return this.$store.getters['auth/is']([
                 Group.ADMINISTRATION,
                 Group.MANAGEMENT,
+                Group.TECHNICIAN,
             ]);
         },
 

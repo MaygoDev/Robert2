@@ -8,7 +8,11 @@ export default {
     },
     computed: {
         isTeamMember() {
-            return this.$store.getters['auth/is']([Group.ADMINISTRATION, Group.MANAGEMENT]);
+            return this.$store.getters['auth/is']([
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ]);
         },
     },
     render() {

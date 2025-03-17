@@ -91,7 +91,11 @@ const ScheduleCalendarHeader = defineComponent({
         },
 
         isTeamMember(): boolean {
-            return this.$store.getters['auth/is']([Group.ADMINISTRATION, Group.MANAGEMENT]);
+            return this.$store.getters['auth/is']([
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ]);
         },
     },
     created() {

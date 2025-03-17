@@ -1,5 +1,5 @@
 import Login from './Login';
-import Schedule, { pages as schedulePages } from './Schedule';
+import Schedule, {pages as schedulePages} from './Schedule';
 import EventEdit from './EventEdit';
 import EventDeparture from './EventDeparture';
 import EventReturn from './EventReturn';
@@ -20,10 +20,10 @@ import TechnicianView from './TechnicianView';
 import Parks from './Parks';
 import ParkEdit from './ParkEdit';
 import UserSettings from './Settings/User';
-import GlobalSettings, { pages as globalSettingsPages } from './Settings/Global';
-import { Group } from '@/stores/api/groups';
+import GlobalSettings, {pages as globalSettingsPages} from './Settings/Global';
+import {Group} from '@/stores/api/groups';
 
-import type { RouteConfig } from 'vue-router';
+import type {RouteConfig} from 'vue-router';
 
 const pages: RouteConfig[] = [
     //
@@ -47,7 +47,7 @@ const pages: RouteConfig[] = [
     {
         name: 'home',
         path: '/',
-        redirect: { name: 'schedule' },
+        redirect: {name: 'schedule'},
     },
 
     //
@@ -62,6 +62,7 @@ const pages: RouteConfig[] = [
             requiresGroups: [
                 Group.ADMINISTRATION,
                 Group.MANAGEMENT,
+                Group.TECHNICIAN,
                 Group.READONLY_PLANNING_GENERAL,
             ],
         },
@@ -78,7 +79,11 @@ const pages: RouteConfig[] = [
         component: EventEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -87,7 +92,11 @@ const pages: RouteConfig[] = [
         component: EventDeparture,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -96,7 +105,11 @@ const pages: RouteConfig[] = [
         component: EventReturn,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -105,7 +118,11 @@ const pages: RouteConfig[] = [
         component: EventEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
 
@@ -151,7 +168,11 @@ const pages: RouteConfig[] = [
         component: Beneficiaries,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -160,7 +181,11 @@ const pages: RouteConfig[] = [
         component: BeneficiaryView,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -169,7 +194,11 @@ const pages: RouteConfig[] = [
         component: BeneficiaryEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -178,7 +207,11 @@ const pages: RouteConfig[] = [
         component: BeneficiaryEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
 
@@ -192,7 +225,11 @@ const pages: RouteConfig[] = [
         component: CompanyEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -201,7 +238,11 @@ const pages: RouteConfig[] = [
         component: CompanyEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
 
@@ -215,7 +256,11 @@ const pages: RouteConfig[] = [
         component: Materials,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -224,7 +269,11 @@ const pages: RouteConfig[] = [
         component: MaterialEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -233,7 +282,11 @@ const pages: RouteConfig[] = [
         component: MaterialEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -242,7 +295,11 @@ const pages: RouteConfig[] = [
         component: MaterialView,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
 
@@ -288,7 +345,11 @@ const pages: RouteConfig[] = [
         component: Technicians,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -297,7 +358,11 @@ const pages: RouteConfig[] = [
         component: TechnicianEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -306,7 +371,11 @@ const pages: RouteConfig[] = [
         component: TechnicianEdit,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
     {
@@ -315,7 +384,11 @@ const pages: RouteConfig[] = [
         component: TechnicianView,
         meta: {
             requiresAuth: true,
-            requiresGroups: [Group.ADMINISTRATION, Group.MANAGEMENT],
+            requiresGroups: [
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ],
         },
     },
 
@@ -364,6 +437,7 @@ const pages: RouteConfig[] = [
             requiresGroups: [
                 Group.ADMINISTRATION,
                 Group.MANAGEMENT,
+                Group.TECHNICIAN,
                 Group.READONLY_PLANNING_GENERAL,
             ],
         },
@@ -382,7 +456,7 @@ const pages: RouteConfig[] = [
     // - Catch all.
     //
 
-    { path: '*', redirect: '/' },
+    {path: '*', redirect: '/'},
 ];
 
 export default pages;

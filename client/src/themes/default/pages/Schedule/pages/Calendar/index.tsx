@@ -115,7 +115,11 @@ const ScheduleCalendar = defineComponent({
     },
     computed: {
         isTeamMember(): boolean {
-            return this.$store.getters['auth/is']([Group.ADMINISTRATION, Group.MANAGEMENT]);
+            return this.$store.getters['auth/is']([
+                Group.ADMINISTRATION,
+                Group.MANAGEMENT,
+                Group.TECHNICIAN,
+            ]);
         },
 
         filteredBookings(): LazyBooking[] {
